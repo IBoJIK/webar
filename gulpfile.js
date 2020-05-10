@@ -63,8 +63,7 @@ gulp.task('html', function () {
 
 gulp.task('js', function () {
 	return gulp.src([
-		'.'
-		// 'node_modules/@google/model-viewer/dist/model-viewer.js'
+		'node_modules/@google/model-viewer/dist/model-viewer.js'
 	])
 		.pipe(concat('libs.min.js'))
 		.pipe(gulp.dest('app/js'))
@@ -89,4 +88,4 @@ gulp.task('watch', function () {
 });
 
 /* Вводим команду "gulp" активируется препроцессор и автоматическое обновление страницы*/
-gulp.task('default', gulp.parallel('css', 'scss', 'js',  'webserver', 'watch'))
+gulp.task('default', gulp.parallel('css', 'scss',  'webserver', 'watch'))
